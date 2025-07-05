@@ -1,8 +1,23 @@
 import React from 'react'
-
+import './assets/fonts/fonts.css'
+import Navbar from './components/Navbar'
+import {BrowserRouter as Router , Routes,Route } from 'react-router-dom';
+import Blogs from './components/Blogs.jsx';
+import Post from './components/Post.jsx'
+import Home from './components/Home.jsx';
 const App = () => {
   return (
-    <div className='bg-amber-100'>App</div>
+    <div className='h-screen w-screen bg-slate-50 bg-cover bg-center'>
+       <Router>    
+       <Navbar/>
+       <Routes>
+        <Route />
+        <Route path='/blogs' element={<Blogs/>}/>
+        <Route path='/post' element={<Post/>}/>
+        <Route path='/' element={<Home/>}/>
+       </Routes>
+       </Router>  
+    </div>
   )
 }
 
