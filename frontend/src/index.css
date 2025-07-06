@@ -1,1 +1,9 @@
 @import "tailwindcss";
+/* Reset margin and make sure height is correct */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black; /* ensures black background */
+  overflow: hidden; /* optional: prevents scrollbars */
+}

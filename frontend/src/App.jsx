@@ -7,9 +7,10 @@ import Post from './components/Post.jsx'
 import Home from './components/Home.jsx';
 const App = () => {
   return (
-    <div className='h-screen w-screen bg-slate-50 bg-cover bg-center'>
+    <div className='h-screen w-screen bg-black'>
        <Router>    
        <Navbar/>
+       <Home/>
        <Routes>
         <Route />
         <Route path='/blogs' element={<Blogs/>}/>
