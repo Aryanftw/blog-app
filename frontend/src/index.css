@@ -5,5 +5,5 @@ html, body, #root {
   margin: 0;
   padding: 0;
   background-color: black; /* ensures black background */
-  overflow: hidden; /* optional: prevents scrollbars */
+  scroll-behavior: smooth;
 }
