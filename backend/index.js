@@ -5,7 +5,10 @@ import connectDB from "./db/db.js";
 import router from "./routes/blogs.route.js"
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://blog-app-three-kappa-83.vercel.app", // your deployed frontend URL
+  credentials: true,
+}));
 app.use(express.json());
 dotenv.config()
 const port = process.env.PORT || 3000;
