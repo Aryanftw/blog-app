@@ -91,7 +91,7 @@ const Home = () => {
               <img
                 src="/hero-image.png"
                 alt="Hero Section"
-                className="w-full h-auto max-h-[400px] object-contain"
+                className="w-full mix-blend-screen h-auto max-h-[400px] object-contain drop-shadow-[0_5px_20px_rgba(255,255,255,0.1)]"
               />
             </div>
           </div>
