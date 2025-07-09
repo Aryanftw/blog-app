@@ -47,7 +47,7 @@ const Latest = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map((blog) => (
             <div 
-              key={blog.id}
+              key={blog._id}
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
             >
               {/* Card Content */}
@@ -81,7 +81,7 @@ const Latest = () => {
                 <div className="pt-4">
                   <button className="group/btn relative overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:bg-white/20 hover:scale-105 active:scale-95 w-full">
                     <span className="relative z-10 flex items-center justify-center gap-2">
-                      <Link to="/blogs">View More</Link>
+                      <Link to={`/blogs/${blog._id}`}>View More</Link>
                       <svg 
                         className="w-4 h-4 transform transition-transform group-hover/btn:translate-x-1" 
                         fill="none" 

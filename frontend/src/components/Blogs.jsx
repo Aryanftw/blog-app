@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getallblogs } from '../api/api.js';
+import { Link } from 'react-router-dom';
 const BlogsPage = () => {
   const [blogs, setBlogs] = useState([]);
   const [filteredBlogs, setFilteredBlogs] = useState([]);
@@ -137,7 +138,7 @@ const BlogsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 pb-20">
             {filteredBlogs.map((blog) => (
               <div 
-                key={blog.id}
+                key={blog._id}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               >
                 <div className="space-y-4 md:space-y-6">
@@ -167,7 +168,7 @@ const BlogsPage = () => {
                   <div className="pt-4">
                     <button className="group/btn relative overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:bg-white/20 hover:scale-105 active:scale-95 w-full">
                       <span className="relative z-10 flex items-center justify-center gap-2">
-                        <a href={`/blog/${blog.id}`}>Read Full Article</a>
+                        <Link to={`/blogs/${blog._id}`}>Read More</Link>
                         <svg 
                           className="w-4 h-4 transform transition-transform group-hover/btn:translate-x-1" 
                           fill="none" 
