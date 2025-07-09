@@ -1,6 +1,7 @@
 import React from "react";
 import "../assets/fonts/fonts.css";
 import Latest from "./Latest";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -39,7 +40,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4 items-center sm:items-start justify-center lg:justify-start">
               <button className="w-fit group relative overflow-hidden bg-gradient-to-r from-purple-500 to-pink-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105 active:scale-95">
                 <span className="relative z-10 flex items-center gap-2">
-                  Start Writing
+                  <Link to="/post">Start Writing</Link>
                   <svg
                     className="w-5 h-5 transform transition-transform group-hover:translate-x-1"
                     fill="none"
