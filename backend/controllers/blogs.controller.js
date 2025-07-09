@@ -37,7 +37,7 @@ export const getblogbytitle = async (req,res) => {
 
 export const getblogs = async (req,res) => {
   try {
-    const blogs = await Blog.find();
+    const blogs = await Blog.find().sort({createdAt : -1});
     if(!blogs){
       return res.status(400).send("No blogs found");
     }
